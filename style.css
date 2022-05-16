@@ -8,7 +8,6 @@ nav img{
 }
 div.row img{
     width: 100px;
-    /* height: auto; */
 }
 
 #aboutSection{
@@ -21,7 +20,6 @@ padding-top: 50px;
 
 #verbSection div{
     height: 600px;
-    /* border: 2px solid red; */
 }
 
 #verbSection li{
@@ -35,8 +33,12 @@ padding-top: 50px;
     color: lightsteelblue;
 }
 
-#verbSection li:active{
+#verbSection li:active, .on{
     cursor: pointer;
     font-size: 18px;
-    color: lightsteelblue;
+    color: lightseagreen;
+}
+table, thead,td,tr{
+    color: #ccc;
+    /* border: 2px solid blue; */
 }
