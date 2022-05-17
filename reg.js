@@ -1,7 +1,9 @@
 let 
 ulDom = document.querySelector('ul'),
 highlightedVerb = ''
-const verbDisplayDiv = document.querySelector('#verbDisplay')
+const 
+verbDisplayDiv = document.querySelector('#verbDisplay')
+
 
 ulDom.addEventListener('click', myFunc)
 
@@ -12,6 +14,7 @@ function myFunc(e){
     highlightedVerb = ''
 
     switch(verb){
+      // reg verbs
         case "Mancari (To Eat)":
             verbDisplay('Manciari (To Eat)','Manciavi', 'Manciu','Stiau Manciannu','Manciasti','Manci',
             'Stai Manciannu','Manciau','Mancia','Sta Manciannu','Manciamu','Manciamu','Stamu Manciannu','Manciàstivu','Manciati','Stati Manciannu','Manciaru','Màncianu','Stannu Manciannu', 'm')
@@ -31,29 +34,7 @@ function myFunc(e){
         case "Piaciri (To Like)":
             verbDisplay('Piaciri (To Like)','Piacivi', 'Piaciu','Stiau Piacennu','Piacisti','Piaci',
             'Stai Piacennu','Piacìu','Piaci','Sta Piacennu','Piaciemu','Piaciemu','Stamu Piacennu','Piacìstivu','Piaciti','Stati Piacennu','Piaceru','Piàciunu','Stannu Piacennu', 'pia')
-            break;   
-
-
-
-
-        // case "Parrari (To Speak)":
-        //     console.log("Parrari")
-        //     break;   
-        // case "Parrari (To Speak)":
-        //     console.log("Parrari")
-        //     break;   
-        // case "Parrari (To Speak)":
-        //     console.log("Parrari")
-        //     break;   
-        // case "Parrari (To Speak)":
-        //     console.log("Parrari")
-        //     break;   
-        // case "Parrari (To Speak)":
-        //     console.log("Parrari")
-        //     break;   
-        // case "Parrari (To Speak)":
-        //     console.log("Parrari")
-        //     break;   
+            break;     
     }
     
 }
