@@ -1,10 +1,16 @@
-let ulDom = document.querySelector('ul')
+let 
+ulDom = document.querySelector('ul'),
+highlightedVerb = ''
 const verbDisplayDiv = document.querySelector('#verbDisplay')
 
 ulDom.addEventListener('click', myFunc)
 
 function myFunc(e){
     const verb = e.target.innerText
+
+    highlightedVerb.className = ''
+    highlightedVerb = ''
+
     switch(verb){
         case "Mancari (To Eat)":
             verbDisplay('Manciari (To Eat)','Manciavi', 'Manciu','Stiau Manciannu','Manciasti','Manci',
@@ -53,11 +59,14 @@ function myFunc(e){
 }
 
 function verbDisplay(verb,ioPast,ioPresent,ioGerrund,tuPast,tuPresent,tuGerrund, iddruPast,iddruPresent,iddruGerrund, nuiPast,nuiPresent,nuiGerrund,vuiPast,vuiPresent,vuiGerrund,iddriPast,iddriPresent,iddriGerrund,id){
-    document.getElementById(`${id}`).className += 'on'
+
+  highlightedVerb = document.getElementById(`${id}`)
+  highlightedVerb.className += ' on'
+
     verbDisplayDiv.innerHTML =`
     <table class="table">
     <tr>
-      <th scope="col">${verb}</th>
+      <th scope="col" class= "on">${verb}</th>
       <th scope="col">Past</th>
       <th scope="col">Present</th>
       <th scope="col">Gerund</th>
