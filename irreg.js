@@ -9,26 +9,28 @@ ulDom.addEventListener('click', myFunc)
 
 function myFunc(e){
     const verb = e.target.innerText
+    if(highlightedVerb){
+      highlightedVerb.className = ''
+      highlightedVerb = ''
+    }
 
-    highlightedVerb.className = ''
-    highlightedVerb = ''
 
     switch(verb){
       // ireg verbs
         case "Vùliri (To Want)":
-          verbDisplay(verbDisplayDiv,'Vùliri (To Want)','Vulia', 'Vogghiu','Stiau Vulennu','Vulia','Voi','Stai Vulennu','Vulia','Voli','Sta Vulennu','Vuliàmu','Vulèmu','Stamu Vulennu','Vuliàvu','Vuliti','Stati Vulennu','Vuliànu','Vonnu','Stannu Vulennu', 'v')
+          verbDisplay('Vùliri (To Want)','Vulia', 'Vogghiu','Stiau Vulennu','Vulia','Voi','Stai Vulennu','Vulia','Voli','Sta Vulennu','Vuliàmu','Vulèmu','Stamu Vulennu','Vuliàvu','Vuliti','Stati Vulennu','Vuliànu','Vonnu','Stannu Vulennu', 'v')
             break;  
         case "Fari (To Do)":
-        verbDisplay(verbDisplayDiv,'Fari (To Do)','Fici', 'Fazzu','Stiau Facennu','Facisti','Fai', 'Stai Facennu','Fici','Fa','Sta Facennu','Ficimu','Facemu','Stamu Facennu','Facìstivu','Faciti','Stati Facennu','Ficiru','Fannu','Stannu Facennu', 'f')
+        verbDisplay('Fari (To Do)','Fici', 'Fazzu','Stiau Facennu','Facisti','Fai', 'Stai Facennu','Fici','Fa','Sta Facennu','Ficimu','Facemu','Stamu Facennu','Facìstivu','Faciti','Stati Facennu','Ficiru','Fannu','Stannu Facennu', 'f')
             break;  
         case "Diri (To Say)":
-        verbDisplay(verbDisplayDiv,'Diri (To Say)','Dissi', 'Dicu','Stiau Dicennu','Dicisti','Dici', 'Stai Dicennu','Dissi','Dici','Sta Dicennu','Dissimu','Dicemu','Stamu Dicennu','Dicìstivu','Diciti','Stati Dicennu','Dissiru','Dìcunu','Stannu Dicennu', 'd')
+        verbDisplay('Diri (To Say)','Dissi', 'Dicu','Stiau Dicennu','Dicisti','Dici', 'Stai Dicennu','Dissi','Dici','Sta Dicennu','Dissimu','Dicemu','Stamu Dicennu','Dicìstivu','Diciti','Stati Dicennu','Dissiru','Dìcunu','Stannu Dicennu', 'd')
             break;  
         case "Pùtiri (To Be Able, Possible)":
-          verbDisplay(verbDisplayDiv,'Pùtiri (To Be Able, Possible)','Sapià', 'Pozzu','Stiau Putennu','Putià','Poi', 'Stai Putennu','Putià','Po','Sta Putennu','Putíamu','Putèmu','Stamu Putennu','Putíavu','Putiti','Stati Putennu','Putíanu','Ponnu','Stannu Putennu', 'p')
+          verbDisplay('Pùtiri (To Be Able, Possible)','Sapià', 'Pozzu','Stiau Putennu','Putià','Poi', 'Stai Putennu','Putià','Po','Sta Putennu','Putíamu','Putèmu','Stamu Putennu','Putíavu','Putiti','Stati Putennu','Putíanu','Ponnu','Stannu Putennu', 'p')
             break;  
         case "Sapiri (To Know)":
-          verbDisplay(verbDisplayDiv,'Sapiri (To Know)','Sappía', 'Sacciu','Stiau Sapennu','Sappía','Sai', 'Stai Sapennu','Sappía','Sapí','Sta Sapennu','Sappíamu','Sapèmu','Stamu Sapennu','Sappíavu','Sapiti','Stati Sapennu','Sappíanu','Sannu','Stannu Sapennu', 's')
+          verbDisplay('Sapiri (To Know)','Sappía', 'Sacciu','Stiau Sapennu','Sappía','Sai', 'Stai Sapennu','Sappía','Sapí','Sta Sapennu','Sappíamu','Sapèmu','Stamu Sapennu','Sappíavu','Sapiti','Stati Sapennu','Sappíanu','Sannu','Stannu Sapennu', 's')
           break;  
     }      
 }
@@ -36,7 +38,7 @@ function myFunc(e){
 function verbDisplay(verb,ioPast,ioPresent,ioGerrund,tuPast,tuPresent,tuGerrund, iddruPast,iddruPresent,iddruGerrund, nuiPast,nuiPresent,nuiGerrund,vuiPast,vuiPresent,vuiGerrund,iddriPast,iddriPresent,iddriGerrund,id){
 
   highlightedVerb = document.getElementById(`${id}`)
-  highlightedVerb.className += ' on'
+  highlightedVerb.className += 'on'
 
     verbDisplayDiv.innerHTML =`
     <table class="table">
