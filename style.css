@@ -42,3 +42,11 @@ table, thead,td,tr{
     color: #ccc;
     /* border: 2px solid blue; */
 }
+
+#home_pic{
+    width: 700px;
+}
+
+section h4{
+    text-decoration: underline;
+}
