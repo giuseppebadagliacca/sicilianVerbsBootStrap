@@ -9,7 +9,7 @@ ulDom.addEventListener('click', myFunc)
 
 function myFunc(e){
     const verb = e.target.innerText
-
+    
     highlightedVerb.className = ''
     highlightedVerb = ''
 
